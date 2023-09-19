@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "japan_national_holiday/version"
+require 'date'
+
+require_relative 'japan_national_holiday/version'
 
 module JapanNationalHoliday
-  class Error < StandardError; end
-  # Your code goes here...
+  def self.holiday?(target_date)
+    true
+  end
 end
