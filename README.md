@@ -1,6 +1,6 @@
-# JpaanNationalHoliday
+# JapanNationalHoliday
 
-Doguu introduce arithmetic mean, geometric mean, harmonic mean and dispersion. Reference is https://www.utp.or.jp/book/b300857.html .
+Doguu introduce Japan National Holiday. Reference is https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html .
 
 ## How to intall
 
