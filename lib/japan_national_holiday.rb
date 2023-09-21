@@ -7,6 +7,7 @@ require_relative 'japan_national_holiday/version'
 
 module JapanNationalHoliday
   def self.holiday?(target_date)
+    binding.irb
     holidays = open('holidays.yml', 'r') { |f| YAML.unsafe_load_file(f) }
 
     true
