@@ -13,4 +13,8 @@ module JapanNationalHoliday
   def self.holiday?(target_date)
     @@holidays.include?(target_date)
   end
+
+  def self.between(start_date, end_date)
+    @@holidays.select { |target_date| start_date <= target_date && target_date <= end_date }
+  end
 end

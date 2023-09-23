@@ -18,4 +18,13 @@ RSpec.describe JapanNationalHoliday do
       it { is_expected.to eq false }
     end
   end
+
+  describe '.between' do
+    let(:start_date) { Date.new(2023, 1, 9) }
+    let(:end_date) { Date.new(2023, 2, 23) }
+
+    subject { described_class.between(start_date, end_date) }
+
+    it { is_expected.to eq [Date.new(2023, 1, 9), Date.new(2023, 2, 11), Date.new(2023, 2, 23)] }
+  end
 end
