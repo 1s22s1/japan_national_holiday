@@ -23,4 +23,6 @@ require 'japan_national_holiday'
 
 JapanNationalHoliday.holiday?(Date.new(2023, 1, 9)) # => true
 JapanNationalHoliday.holiday?(Date.new(2023, 1, 10)) # => false
+
+JapanNationalHoliday.between(Date.new(2023, 1, 9), Date.new(2023, 1, 20))
 ```
