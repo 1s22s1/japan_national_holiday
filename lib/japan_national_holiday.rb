@@ -6,10 +6,11 @@ require 'yaml'
 require_relative 'japan_national_holiday/version'
 
 module JapanNationalHoliday
-  def self.holiday?(target_date)
-    file_path = File.expand_path('../japan_national_holiday/holidays.yml', __FILE__)
-    holidays = open(file_path, 'r') { |f| YAML.unsafe_load_file(f) }
+  @@holidays = open(File.expand_path('japan_national_holiday/holidays.yml', __dir__), 'r') do |f|
+    YAML.unsafe_load_file(f)
+  end
 
-    true
+  def self.holiday?(target_date)
+    @@holidays.include?(target_date)
   end
 end

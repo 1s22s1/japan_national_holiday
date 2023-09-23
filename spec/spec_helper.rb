@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'japan_national_holiday'
 
 RSpec.configure do |config|
