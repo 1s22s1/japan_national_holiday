@@ -7,7 +7,8 @@ require_relative 'japan_national_holiday/version'
 
 module JapanNationalHoliday
   def self.holiday?(target_date)
-    holidays = open('holidays.yml', 'r') { |f| YAML.unsafe_load_file(f) }
+    file_path = File.expand_path('../japan_national_holiday/holidays.yml', __FILE__)
+    holidays = open(file_path, 'r') { |f| YAML.unsafe_load_file(f) }
 
     true
   end
